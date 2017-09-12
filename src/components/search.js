@@ -2,16 +2,17 @@ angular.module('video-player')
 
 .component('search', {
   bindings: {
-    videos: '<'
+    videos: '<',
+    searchResults: '<'
   },
   controller: function(youTube) {
-    this.query = "";
+    console.log(this);
+    this.query = '';
     this.search = () => {
       var params = {
         query: this.query
       };
-      console.log(this.query);
-      youTube.search(params, function() {console.log(data);});
+      youTube.search(params, this.searchResults);
     };
     this.result = () => {
       

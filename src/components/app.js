@@ -5,14 +5,15 @@ angular.module('video-player')
   bindings: {
     // videos: '<'
   },
-  controller: function() {
+  controller: function(youTube) {
     this.videos = exampleVideoData;
     this.currentVideo = this.videos[0];
     this.selectVideo = (index) => {
       this.currentVideo = this.videos[index]; //placeholder value
     };
-    this.searchResults = () => {
-
+    this.searchResults = (videos) => {
+      this.videos = videos;
+      this.currentVideo = this.videos[0];
     };
   },
   templateUrl: 'src/templates/app.html'

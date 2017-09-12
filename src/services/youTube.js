@@ -6,9 +6,10 @@ angular.module('video-player')
     return $http({
       method: 'GET',
       url: 'https://www.googleapis.com/youtube/v3/search',
-      data: {key: params.key || YOUTUBE_API_KEY, q: params.query || 'puppies', maxResults: params.maxResults || 5, videoEmbeddable: 'true', type: 'video', part: 'snippet'}
+      params: {key: params.key || YOUTUBE_API_KEY, q: params.query || 'puppies', maxResults: params.maxResults || 5, videoEmbeddable: 'true', type: 'video', part: 'snippet'}
     }).then(function(response) {
-      callback(response.items);
+      console.log('success', response);
+      callback(response.data.items);
     }, function(response) {
       console.log('failed:', response);
     });
