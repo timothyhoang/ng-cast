@@ -6,15 +6,9 @@ angular.module('video-player')
     index: '<'
   },
   controller: function() {
-
     this.onClick = (index) => {
       this.selectVideo(index);
     };
-
-    this.nameVideo = () => {
-      console.log(this.video);
-    };
-    
   },
   templateUrl: 'src/templates/videoListEntry.html'
 });

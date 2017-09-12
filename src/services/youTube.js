@@ -1,7 +1,5 @@
 angular.module('video-player')
 .service('youTube', function($http) {
-  // TODO
-  // this.videos = exampleVideoData;
   this.search = function(params, callback) {
     return $http({
       method: 'GET',
