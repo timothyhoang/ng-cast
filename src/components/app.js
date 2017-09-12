@@ -6,10 +6,13 @@ angular.module('video-player')
     // videos: '<'
   },
   controller: function() {
-    this.selected = 0;
     this.videos = exampleVideoData;
+    this.currentVideo = this.videos[0];
     this.selectVideo = (index) => {
-      this.selected = index;
+      this.currentVideo = this.videos[index]; //placeholder value
+    };
+    this.searchResults = () => {
+
     };
   },
   templateUrl: 'src/templates/app.html'
