@@ -6,8 +6,8 @@ angular.module('video-player')
     this.currentVideo = null;
     this.service = youTube;
     
-    this.selectVideo = (index) => {
-      this.currentVideo = this.videos[index];
+    this.selectVideo = (video) => {
+      this.currentVideo = video;
     };
     
     this.searchResults = (videos) => {
@@ -19,7 +19,7 @@ angular.module('video-player')
       var params = {
         query: this.query
       };
-      this.service.search(params, this.searchResults);
+      youTube.search(params, this.searchResults);
     };
 
     youTube.search({q: 'puppies'}, this.searchResults);

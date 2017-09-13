@@ -1,0 +1,9 @@
+<div class="video-player-details">
+  <h3 ng-click="$ctrl.selectVideo($ctrl.video)">{{$ctrl.video.snippet.title}}</h3>
+  <div class="statistics">
+    <span class="views">{{$ctrl.statistics.viewCount}} views</span>
+    <span class="likes">{{$ctrl.statistics.likeCount}} likes</span>
+    <span class="dislikes">{{$ctrl.statistics.dislikeCount}} dislikes</span>
+  </div>
+  <div>{{$ctrl.video.snippet.description}}</div>
+</div>

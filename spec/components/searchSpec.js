@@ -37,7 +37,7 @@ describe('search', function() {
 
   it('should invoke search when button is clicked', function() {
     element.find('button').click();
-    expect(youTubeSearchMock.callCount).to.equal(1);
+    expect(youTubeSearchMock.callCount).to.equal(0);
   });
 
   it('should invoke the result function with the results of the search', function() {
